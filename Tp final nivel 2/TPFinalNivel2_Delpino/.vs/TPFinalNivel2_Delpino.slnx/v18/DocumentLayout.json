@@ -1,0 +1,137 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EB77CDC8-421D-463D-A106-FB5992B40F03}|TPFinalNivel2_Delpino\\UI.csproj|c:\\users\\franco\\desktop\\.net\\tp final nivel 2\\tpfinalnivel2_delpino\\tpfinalnivel2_delpino\\agregararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EB77CDC8-421D-463D-A106-FB5992B40F03}|TPFinalNivel2_Delpino\\UI.csproj|solutionrelative:tpfinalnivel2_delpino\\agregararticulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31FB4DE7-2B48-45A3-8D20-458EAD4050FE}|Articulos\\Dominio.csproj|c:\\users\\franco\\desktop\\.net\\tp final nivel 2\\tpfinalnivel2_delpino\\articulos\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31FB4DE7-2B48-45A3-8D20-458EAD4050FE}|Articulos\\Dominio.csproj|solutionrelative:articulos\\articulo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4F1767E0-666C-4F3E-A710-8F25E66EDE0A}|CapaDatos\\CapaDatos.csproj|c:\\users\\franco\\desktop\\.net\\tp final nivel 2\\tpfinalnivel2_delpino\\capadatos\\repositorioarticulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4F1767E0-666C-4F3E-A710-8F25E66EDE0A}|CapaDatos\\CapaDatos.csproj|solutionrelative:capadatos\\repositorioarticulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB77CDC8-421D-463D-A106-FB5992B40F03}|TPFinalNivel2_Delpino\\UI.csproj|c:\\users\\franco\\desktop\\.net\\tp final nivel 2\\tpfinalnivel2_delpino\\tpfinalnivel2_delpino\\lista de articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EB77CDC8-421D-463D-A106-FB5992B40F03}|TPFinalNivel2_Delpino\\UI.csproj|solutionrelative:tpfinalnivel2_delpino\\lista de articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EB77CDC8-421D-463D-A106-FB5992B40F03}|TPFinalNivel2_Delpino\\UI.csproj|c:\\users\\franco\\desktop\\.net\\tp final nivel 2\\tpfinalnivel2_delpino\\tpfinalnivel2_delpino\\lista de articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EB77CDC8-421D-463D-A106-FB5992B40F03}|TPFinalNivel2_Delpino\\UI.csproj|solutionrelative:tpfinalnivel2_delpino\\lista de articulos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31FB4DE7-2B48-45A3-8D20-458EAD4050FE}|Articulos\\Dominio.csproj|c:\\users\\franco\\desktop\\.net\\tp final nivel 2\\tpfinalnivel2_delpino\\articulos\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31FB4DE7-2B48-45A3-8D20-458EAD4050FE}|Articulos\\Dominio.csproj|solutionrelative:articulos\\marca.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{31FB4DE7-2B48-45A3-8D20-458EAD4050FE}|Articulos\\Dominio.csproj|c:\\users\\franco\\desktop\\.net\\tp final nivel 2\\tpfinalnivel2_delpino\\articulos\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{31FB4DE7-2B48-45A3-8D20-458EAD4050FE}|Articulos\\Dominio.csproj|solutionrelative:articulos\\categoria.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AgregarArticulo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\TPFinalNivel2_Delpino\\AgregarArticulo.cs",
+              "RelativeDocumentMoniker": "TPFinalNivel2_Delpino\\AgregarArticulo.cs",
+              "ToolTip": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\TPFinalNivel2_Delpino\\AgregarArticulo.cs [Design]",
+              "RelativeToolTip": "TPFinalNivel2_Delpino\\AgregarArticulo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T20:34:31.721Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RepositorioArticulos.cs",
+              "DocumentMoniker": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\CapaDatos\\RepositorioArticulos.cs",
+              "RelativeDocumentMoniker": "CapaDatos\\RepositorioArticulos.cs",
+              "ToolTip": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\CapaDatos\\RepositorioArticulos.cs",
+              "RelativeToolTip": "CapaDatos\\RepositorioArticulos.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T20:13:30.404Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Lista de articulos.cs",
+              "DocumentMoniker": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\TPFinalNivel2_Delpino\\Lista de articulos.cs",
+              "RelativeDocumentMoniker": "TPFinalNivel2_Delpino\\Lista de articulos.cs",
+              "ToolTip": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\TPFinalNivel2_Delpino\\Lista de articulos.cs",
+              "RelativeToolTip": "TPFinalNivel2_Delpino\\Lista de articulos.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAApwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T20:09:46.047Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Lista de articulos.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\TPFinalNivel2_Delpino\\Lista de articulos.cs",
+              "RelativeDocumentMoniker": "TPFinalNivel2_Delpino\\Lista de articulos.cs",
+              "ToolTip": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\TPFinalNivel2_Delpino\\Lista de articulos.cs [Design]",
+              "RelativeToolTip": "TPFinalNivel2_Delpino\\Lista de articulos.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T19:55:06.081Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Marca.cs",
+              "DocumentMoniker": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\Articulos\\Marca.cs",
+              "RelativeDocumentMoniker": "Articulos\\Marca.cs",
+              "ToolTip": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\Articulos\\Marca.cs",
+              "RelativeToolTip": "Articulos\\Marca.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T18:39:32.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Categoria.cs",
+              "DocumentMoniker": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\Articulos\\Categoria.cs",
+              "RelativeDocumentMoniker": "Articulos\\Categoria.cs",
+              "ToolTip": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\Articulos\\Categoria.cs",
+              "RelativeToolTip": "Articulos\\Categoria.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T18:39:03.837Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Articulo.cs",
+              "DocumentMoniker": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\Articulos\\Articulo.cs",
+              "RelativeDocumentMoniker": "Articulos\\Articulo.cs",
+              "ToolTip": "C:\\Users\\franco\\Desktop\\.net\\Tp final nivel 2\\TPFinalNivel2_Delpino\\Articulos\\Articulo.cs",
+              "RelativeToolTip": "Articulos\\Articulo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAYwBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-16T18:37:13.769Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

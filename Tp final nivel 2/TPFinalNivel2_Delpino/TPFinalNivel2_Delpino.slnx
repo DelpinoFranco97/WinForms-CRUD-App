@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Articulos/Dominio.csproj" Id="31fb4de7-2b48-45a3-8d20-458ead4050fe" />
+  <Project Path="ArtiNegocio/ArtiNegocio.csproj" Id="f5869d0d-1553-4057-bce6-9cebd8d98654" />
+  <Project Path="CapaDatos/CapaDatos.csproj" Id="4f1767e0-666c-4f3e-a710-8f25e66ede0a" />
+  <Project Path="TPFinalNivel2_Delpino/UI.csproj" Id="eb77cdc8-421d-463d-a106-fb5992b40f03" />
+</Solution>
