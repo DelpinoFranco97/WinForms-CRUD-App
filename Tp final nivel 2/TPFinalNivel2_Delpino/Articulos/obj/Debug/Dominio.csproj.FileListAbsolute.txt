@@ -1,0 +1,6 @@
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Articulos\bin\Debug\Articulos.dll
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Articulos\bin\Debug\Articulos.pdb
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Articulos\obj\Debug\Dominio.csproj.AssemblyReference.cache
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Articulos\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Articulos\obj\Debug\Articulos.dll
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Articulos\obj\Debug\Articulos.pdb

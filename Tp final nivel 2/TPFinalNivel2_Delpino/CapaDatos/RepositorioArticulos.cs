@@ -5,13 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using Dominio;
 
+
 namespace CapaDatos
 {
     public class RepositorioArticulos
     {
         public List<Articulo> ListaArticulos;
 
-        public void Listar()
+        public List<Articulo> Listar()
         {
             List<Articulo> ListaArticulos = new List<Articulo>();
             Conexion datos = new Conexion();
@@ -22,21 +23,30 @@ namespace CapaDatos
                 while (datos.ReaderConnection.Read())
                 {
                     Articulo articulo = new Articulo();
+                    Marca marca = new Marca();
+                    Categoria categoria = new Categoria();
                     articulo.Codigo = datos.ReaderConnection["Codigo"].ToString();
-                    articulo.Codigo = datos.ReaderConnection["Nombre"].ToString();
-                    articulo.Codigo = datos.ReaderConnection["Marca"].ToString();
-                    articulo.Codigo = datos.ReaderConnection["Categoria"].ToString();
-                    articulo.Codigo = datos.ReaderConnection["Url"].ToString();
+                    articulo.Nombre = datos.ReaderConnection["Nombre"].ToString();
+                    marca.Nombre = datos.ReaderConnection["idMarca"].ToString();
+                    articulo.Marca = marca;
+                    categoria.Nombre = datos.ReaderConnection["idCategoria"].ToString();
+                    articulo.NombreCategoria = categoria;
+                    articulo.Codigo = datos.ReaderConnection["imagenUrl"].ToString();
                     articulo.Precio = (decimal)datos.ReaderConnection["Precio"];
+                    ListaArticulos.Add(articulo);
+
 
 
                 }
+                return ListaArticulos;
             }
             catch (Exception)
             {
 
                 throw;
             }
+            finally { datos.CerrarConexion(); }
+           
 
 
         }

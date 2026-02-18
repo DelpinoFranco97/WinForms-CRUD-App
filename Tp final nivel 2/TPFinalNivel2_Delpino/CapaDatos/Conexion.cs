@@ -26,9 +26,12 @@ namespace CapaDatos
 
         public void ejecutarLectura(string query)
         {
-            VerificarConexion();
-            setearConsulta(query);
-            ejecutarReader();
+           VerificarConexion();
+          setearConsulta(query);
+          ejecutarReader();
+          
+
+
 
 
         }
@@ -53,8 +56,9 @@ namespace CapaDatos
                     Reader.Close();
                 }
                 Reader = Command.ExecuteReader();
+
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
             }
@@ -75,12 +79,31 @@ namespace CapaDatos
                 }
 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 throw;
 
             }
 
+
+        }
+
+        public void CerrarConexion()
+        {
+
+            try
+            {
+                if (Connec.State == System.Data.ConnectionState.Open)
+                {
+                    Connec.Close();
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
         }
 
