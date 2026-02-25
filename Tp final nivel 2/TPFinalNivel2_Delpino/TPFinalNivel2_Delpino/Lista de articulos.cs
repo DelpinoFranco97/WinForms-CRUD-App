@@ -13,16 +13,24 @@ using Dominio;
 namespace TPFinalNivel2_Delpino
 {
     public partial class Form1 : Form
-    {
+    {   private List<Articulo> listaArticulos;
         public Form1()
         {
             InitializeComponent();
         }
 
+
         private void Form1_Load(object sender, EventArgs e)
         {
             ArticuloNegocio repo = new ArticuloNegocio();
-            dataGridArticulos.DataSource = repo.MostrarArticulos();
+          
+            listaArticulos = repo.MostrarArticulos();
+            dataGridArticulos.DataSource = listaArticulos;
+            dataGridArticulos.Columns["ImagenUrl"].Visible = false;
+           
+
+
+
 
         }
 
@@ -30,6 +38,7 @@ namespace TPFinalNivel2_Delpino
         {
 
         }
+
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
@@ -44,6 +53,35 @@ namespace TPFinalNivel2_Delpino
         private void btnDetalle_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+     
+
+        private void dataGridArticulos_SelectionChanged(object sender, EventArgs e)
+        {
+
+
+
+            Articulo SeleccionadoArticulo = (Articulo) dataGridArticulos.CurrentRow.DataBoundItem;
+            string url = SeleccionadoArticulo.ImagenUrl.ToString();
+            
+            cargarImage(url);
+        }
+        private void cargarImage(string url)
+        {
+            try
+            {
+                pictureBoxArticulo.Load(url);
+            }
+            catch
+            {
+                pictureBoxArticulo.Load("https://i.imgur.com/8Km9tLL.png");
+            }
         }
     }
 }
