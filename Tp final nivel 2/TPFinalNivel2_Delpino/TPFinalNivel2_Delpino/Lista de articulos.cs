@@ -36,7 +36,9 @@ namespace TPFinalNivel2_Delpino
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-
+            AgregarArticulo agregar = new AgregarArticulo();
+            agregar.ShowDialog();
+            
         }
 
 

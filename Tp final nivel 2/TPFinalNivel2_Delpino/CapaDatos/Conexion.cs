@@ -15,6 +15,7 @@ namespace CapaDatos
         private SqlConnection Connec;
 
         public SqlDataReader ReaderConnection { get { return Reader; } }
+        public SqlCommand command { get { return Command; } }
 
         public Conexion()
         {
@@ -26,14 +27,9 @@ namespace CapaDatos
 
         public void ejecutarLectura(string query)
         {
-           VerificarConexion();
+          VerificarConexion();
           setearConsulta(query);
           ejecutarReader();
-          
-
-
-
-
         }
 
         public void setearConsulta(string query)
@@ -105,6 +101,12 @@ namespace CapaDatos
                 throw;
             }
 
+        }
+
+        public void SetearParametros(string clave, object valor)
+        {
+
+            command.Parameters.AddWithValue(clave, valor);
         }
 
     }
