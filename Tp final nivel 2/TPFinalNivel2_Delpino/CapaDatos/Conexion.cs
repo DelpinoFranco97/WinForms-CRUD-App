@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,8 +16,9 @@ namespace CapaDatos
         private SqlDataReader Reader;
         private SqlConnection Connec;
 
-        public SqlDataReader ReaderConnection { get { return Reader; } }
+      public SqlDataReader ReaderConnection { get { return Reader; } }
         public SqlCommand command { get { return Command; } }
+       
 
         public Conexion()
         {
@@ -23,38 +26,69 @@ namespace CapaDatos
 
             Connec = new SqlConnection("server=.\\SQLEXPRESS; database = CATALOGO_DB; integrated security =true");
             Command = new SqlCommand();
+
+
+
+
         }
 
-        public void ejecutarLectura(string query)
+        public void ejecutarLectura()
         {
-          VerificarConexion();
-          setearConsulta(query);
-          ejecutarReader();
+            Command.Connection = Connec;
+         
+            try
+            {
+                Connec.Open();
+                Reader = Command.ExecuteReader();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public void setearConsulta(string query)
+
         {
+            Command.Parameters.Clear();
             Command.CommandType = System.Data.CommandType.Text;
             Command.CommandText = query;
+       
 
 
+
+        }
+
+ 
+
+        public void ejecutarAccion()
+        {   Command.Connection = Connec;
+            try
+            {
+                Connec.Open();
+                Command.ExecuteNonQuery();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
 
 
         public void ejecutarReader()
-        // Verifica  el estado del lector. Utilizo la propiedad IsClosed de sqlreader para obetener el valor. 
-
         {
             try
             {
                 if (Reader != null && !Reader.IsClosed)
-                {
                     Reader.Close();
-                }
-                Reader = Command.ExecuteReader();
 
+                if (Connec.State != ConnectionState.Open)  
+                    Connec.Open();
+
+                Reader = Command.ExecuteReader();
             }
-            catch (Exception )
+            catch
             {
                 throw;
             }
@@ -69,10 +103,12 @@ namespace CapaDatos
             try
             {
                 Command.Connection = Connec;
-                if (Connec.State == System.Data.ConnectionState.Closed)
+                if (Connec.State == System.Data.ConnectionState.Closed && Reader.IsClosed)
                 {
                     Connec.Open();
+                    Reader = Command.ExecuteReader();
                 }
+               
 
             }
             catch (Exception )
@@ -86,27 +122,20 @@ namespace CapaDatos
 
         public void CerrarConexion()
         {
-
-            try
+            if (Reader != null)
             {
-                if (Connec.State == System.Data.ConnectionState.Open)
-                {
-                    Connec.Close();
-                }
-
+                Reader.Close(); 
             }
-            catch (Exception)
-            {
-
-                throw;
-            }
-
+              
+            Connec.Close();
         }
 
         public void SetearParametros(string clave, object valor)
         {
-
-            command.Parameters.AddWithValue(clave, valor);
+            if (valor == null)
+                Command.Parameters.AddWithValue(clave, DBNull.Value);
+            else
+                Command.Parameters.AddWithValue(clave, valor);
         }
 
     }

@@ -10,6 +10,7 @@ namespace Articulos
     {
      
             string Descripcion { get; set; }
+        int Id { get; set; }
         
     }
 }

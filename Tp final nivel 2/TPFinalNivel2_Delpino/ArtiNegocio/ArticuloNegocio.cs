@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Articulos;
+using CapaDatos;
+using Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CapaDatos;
-using Dominio;
 
 namespace ArtiNegocio
 {
@@ -19,13 +20,12 @@ namespace ArtiNegocio
 
         }
 
-   
+
 
         public List<Categoria> Categorias()
         {
-            List<Categoria> categorias= new List<Categoria>();
-
-            categorias = repositorio.Listar<Categoria>("SELECT DESCRIPCION FROM CATEGORIAS");
+            List<Categoria> categorias = new List<Categoria>();
+            categorias = repositorio.Listar<Categoria>("SELECT Id, Descripcion FROM CATEGORIAS");
             return categorias;
 
         }
@@ -33,15 +33,31 @@ namespace ArtiNegocio
         public List<Marca> Marcas()
         {
             List<Marca> marcas = new List<Marca>();
-
-            marcas = repositorio.Listar<Marca>("SELECT DESCRIPCION FROM MARCAS");
+            marcas = repositorio.Listar<Marca>("SELECT Id, Descripcion from Marcas ");
             return marcas;
 
         }
 
         public void AgregarNuevo(Articulo articulo)
         {
-            repositorio.AgregarArticulo(articulo);
+            repositorio.agregarArticulo(articulo);
+        }
+
+        public void modificar(Articulo articulo)
+        {
+            repositorio.Modificar(articulo);
+        }
+
+        public void Eliminar(int id)
+        {
+            repositorio.elimanarArticulo(id);
+        }
+
+        public List<Articulo> FiltrarMarcas(string nombreCategoria)
+        {
+            List<Articulo> marcas = repositorio.filtrarMarcas(nombreCategoria);
+            return marcas;
+
         }
     }
 }

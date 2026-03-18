@@ -60,6 +60,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VerDetalle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VerDetalle.Designer.cs">
+      <DependentUpon>VerDetalle.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AgregarArticulo.resx">
       <DependentUpon>AgregarArticulo.cs</DependentUpon>
     </EmbeddedResource>
@@ -75,6 +81,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="VerDetalle.resx">
+      <DependentUpon>VerDetalle.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,6 +105,10 @@
     <ProjectReference Include="..\ArtiNegocio\ArtiNegocio.csproj">
       <Project>{f5869d0d-1553-4057-bce6-9cebd8d98654}</Project>
       <Name>ArtiNegocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Helpers\Helpers.csproj">
+      <Project>{eddbc5a5-62d2-486e-a7a8-bcbaab8ba1b8}</Project>
+      <Name>Helpers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

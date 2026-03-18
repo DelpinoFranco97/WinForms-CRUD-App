@@ -1,0 +1,7 @@
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Helpers\bin\Debug\Helpers.dll.config
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Helpers\bin\Debug\Helpers.dll
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Helpers\bin\Debug\Helpers.pdb
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Helpers\obj\Debug\Helpers.csproj.AssemblyReference.cache
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Helpers\obj\Debug\Helpers.csproj.CoreCompileInputs.cache
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Helpers\obj\Debug\Helpers.dll
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\Helpers\obj\Debug\Helpers.pdb

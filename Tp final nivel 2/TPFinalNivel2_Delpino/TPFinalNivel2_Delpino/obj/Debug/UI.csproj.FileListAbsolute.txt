@@ -3,9 +3,12 @@ C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel
 C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\bin\Debug\TPFinalNivel2_Delpino.pdb
 C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\bin\Debug\Articulos.dll
 C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\bin\Debug\ArtiNegocio.dll
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\bin\Debug\Helpers.dll
 C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\bin\Debug\CapaDatos.dll
 C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\bin\Debug\Articulos.pdb
 C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\bin\Debug\ArtiNegocio.pdb
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\bin\Debug\Helpers.pdb
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\bin\Debug\Helpers.dll.config
 C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\bin\Debug\CapaDatos.pdb
 C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\obj\Debug\UI.csproj.AssemblyReference.cache
 C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\obj\Debug\TPFinalNivel2_Delpino.AgregarArticulo.resources
@@ -16,3 +19,4 @@ C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel
 C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\obj\Debug\UI.csproj.Up2Date
 C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\obj\Debug\TPFinalNivel2_Delpino.exe
 C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\obj\Debug\TPFinalNivel2_Delpino.pdb
+C:\Users\franco\Desktop\.net\Tp final nivel 2\TPFinalNivel2_Delpino\TPFinalNivel2_Delpino\obj\Debug\TPFinalNivel2_Delpino.VerDetalle.resources

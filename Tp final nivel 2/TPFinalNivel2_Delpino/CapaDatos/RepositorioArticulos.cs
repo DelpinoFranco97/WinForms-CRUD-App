@@ -1,10 +1,13 @@
-﻿using System;
+﻿using Articulos;
+using Dominio;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
-using Dominio;
-using Articulos;
+
 
 
 namespace CapaDatos
@@ -12,24 +15,30 @@ namespace CapaDatos
     public class RepositorioArticulos
     {
         public List<Articulo> ListaArticulos;
+        private Conexion datos = new Conexion();
 
         public List<Articulo> Listar()
         {
             List<Articulo> ListaArticulos = new List<Articulo>();
-            Conexion datos = new Conexion();
+            
 
             try
             {
-                datos.ejecutarLectura("SELECT A.Codigo, A.Nombre,A.ImagenUrl, A.Precio,C.Descripcion as Categoria ,M.Descripcion AS Marca\r\nFROM ARTICULOS A JOIN CATEGORIAS C ON A.IdCategoria = C.Id join MARCAS M ON A.IdMarca = M.Id;");
+                datos.setearConsulta("SELECT A.Id, A.Codigo, A.Nombre,A.Descripcion,A.ImagenUrl, A.Precio,C.Descripcion as Categoria,A.IdMarca, A.IdCategoria ,M.Descripcion AS Marca\r\nFROM ARTICULOS A JOIN CATEGORIAS C ON A.IdCategoria = C.Id join MARCAS M ON A.IdMarca = M.Id;");
+                datos.ejecutarLectura();
                 while (datos.ReaderConnection.Read())
                 {
                     Articulo articulo = new Articulo();
                     articulo.Marca = new Marca();
-                    articulo.NombreCategoria = new Categoria();
+                    articulo.Categoria = new Categoria();
+                    articulo.Id = (int)datos.ReaderConnection["Id"];
                     articulo.Codigo = datos.ReaderConnection["Codigo"].ToString();
                     articulo.Nombre = datos.ReaderConnection["Nombre"].ToString();
-                    articulo.Marca.Nombre = datos.ReaderConnection["Marca"].ToString();
-                    articulo.NombreCategoria.Nombre = datos.ReaderConnection["Categoria"].ToString();
+                    articulo.Descripcion = datos.ReaderConnection["Descripcion"].ToString();
+                    articulo.Marca.Descripcion = datos.ReaderConnection["Marca"].ToString();
+                    articulo.Categoria.Descripcion = datos.ReaderConnection["Categoria"].ToString();
+                    articulo.Marca.Id = (int)datos.ReaderConnection["IdMarca"];
+                    articulo.Categoria.Id = (int)datos.ReaderConnection["IdCategoria"];
                     articulo.ImagenUrl = datos.ReaderConnection["imagenUrl"].ToString();
                     articulo.Precio = (decimal)datos.ReaderConnection["Precio"];
                     ListaArticulos.Add(articulo);
@@ -42,84 +51,111 @@ namespace CapaDatos
 
                 throw;
             }
-            finally { datos.CerrarConexion(); }
-           
+            finally {
+              
+                datos.CerrarConexion(); }
+
 
 
         }
 
-        public void AgregarArticulo(Articulo articulo)
+        public void agregarArticulo(Articulo articulo)
         {
-            Conexion datos = new Conexion();
+           
+
             try
             {
-                datos.ejecutarLectura("INSERT INTO ARTICULOS VALUES ('@Codigo','@Nombre','@Descripcion','@idMarca','@idCategoria','@ImagenUrl','@Precio');");
+              
+              
+
+                datos.setearConsulta("INSERT INTO ARTICULOS VALUES (@Codigo, @Nombre,  @Descripcion,@idMarca, @idCategoria, @ImagenUrl, @Precio);");
                 datos.SetearParametros("@Codigo", articulo.Codigo);
-                datos.SetearParametros("@Codigo", articulo.Nombre);
-                datos.SetearParametros("@Codigo", articulo.Marca);
-                datos.SetearParametros("@Codigo", articulo.NombreCategoria);
-                datos.SetearParametros("@Codigo", articulo.ImagenUrl);
-                datos.SetearParametros("@Codigo", articulo.Precio);
-                datos.command.ExecuteNonQuery();
+                datos.SetearParametros("@Nombre", articulo.Nombre);
+                datos.SetearParametros("@idMarca", articulo.Marca.Id);
+                datos.SetearParametros("@idCategoria", articulo.Categoria.Id);
+                datos.SetearParametros("@Descripcion", articulo.Descripcion);
+                datos.SetearParametros("@ImagenUrl", articulo.ImagenUrl);
+                datos.SetearParametros("@Precio", articulo.Precio);
+
+                /*datos.VerificarConexion(); */  // abre conexión
+                datos.ejecutarAccion();  // recién acá ejecuta
+            }
+            finally
+            {
+                datos.CerrarConexion();
+
+            }
+        }
+
+        public void elimanarArticulo(int Id)
+        {
+            
+            try
+            {
+                
+                datos.setearConsulta($"DELETE FROM ARTICULOS WHERE Id = {Id}");
+                datos.ejecutarLectura();
+
             }
             catch (Exception)
             {
 
                 throw;
             }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+
         }
 
-        public void ElimanarArticulo()
+        public void Modificar(Articulo articulo)
         {
-
-        }
-
-        public void Modificar()
-        {
-
-        }
-
-        //public List<Categoria> ListarCategorias(string query)
-        //{
-        //    Conexion datos = new Conexion();
-        //    List<Categoria> listaCategorias = new List<Categoria>();
-
-        //    try
-        //    {
-        //        datos.ejecutarLectura("SELECT DESCRIPCION FROM CATEGORIAS;");
-        //        while (datos.ReaderConnection.Read())
-        //            {
-
-        //            Categoria categoria = new Categoria();
-        //             categoria.Nombre = datos.ReaderConnection["Descripcion"].ToString();  
-        //            listaCategorias.Add(categoria);
-                    
-        //            }
-        //        return listaCategorias;
-        //    }
-        //    catch (Exception)
-        //    {
-
-        //        throw;
+          
+            try
+            {
                
+                
+                datos.setearConsulta("UPDATE ARTICULOS SET Codigo = @Codigo, Nombre = @Nombre,    Descripcion = @Descripcion, IdMarca=@IdMarca, IdCategoria=@IdCategoria, ImagenUrl = @ImagenUrl, Precio = @Precio WHERE Id = @Id;");
+                datos.SetearParametros("@Id", articulo.Id);
+                datos.SetearParametros("@Codigo", articulo.Codigo);
+                datos.SetearParametros("@Nombre", articulo.Nombre);
+                datos.SetearParametros("@idMarca", articulo.Marca.Id);
+                datos.SetearParametros("@idCategoria", articulo.Categoria.Id);
+                datos.SetearParametros("@Descripcion", articulo.Descripcion);
+                datos.SetearParametros("@ImagenUrl", articulo.ImagenUrl);
+                datos.SetearParametros("@Precio", articulo.Precio);
+                datos.ejecutarAccion();
+            }
+            catch (Exception)
+            {
 
-        //    }
+                throw;
+            }
+            finally
+            { 
+                datos.CerrarConexion();
+            }
+        }
 
-
-
-   
         public List<T> Listar<T>(string query) where T : IDESCRIPCION, new()
         {
-            Conexion datos = new Conexion();
+            
             List<T> lista = new List<T>();
 
             try
             {
-                datos.ejecutarLectura(query);
+               
+                datos.setearConsulta(query);
+                
+                datos.ejecutarLectura();
+                datos.ejecutarReader();
+
                 while (datos.ReaderConnection.Read())
                 {
                     T objeto = new T();
-                    
+                   
+                    objeto.Id = (int)datos.ReaderConnection["Id"];
                     objeto.Descripcion = datos.ReaderConnection["Descripcion"].ToString();
                     lista.Add(objeto);
 
@@ -133,9 +169,48 @@ namespace CapaDatos
 
 
             }
+            finally {  datos.CerrarConexion();}
 
 
 
         }
+        public List<Articulo> filtrarMarcas ( string Descripcion)
+        {
+
+
+            List<Articulo> marcas = new List<Articulo>();
+          
+            
+            try
+            {
+                datos.setearConsulta("select DISTINCT  MARCAS.Descripcion from ARTICULOS JOIN MARCAS ON MARCAS.Id = ARTICULOS.IdMarca  where  IdCategoria = (SELECT id from CATEGORIAS WHERE Descripcion = @Descripcion) ");
+                datos.SetearParametros("@Descripcion", Descripcion);
+                datos.ejecutarReader();
+
+
+                while (datos.ReaderConnection.Read())
+                {
+                    Articulo articulo = new Articulo();
+                   
+                    articulo.Marca = new Marca();
+                    articulo.Marca.Descripcion = datos.ReaderConnection["Descripcion"].ToString();
+                    marcas.Add(articulo);
+                }
+                return marcas;
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+
+        }
+
+
     }
 }

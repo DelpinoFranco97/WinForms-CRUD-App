@@ -9,13 +9,14 @@ namespace Dominio
 
 {
    public class Categoria:IDESCRIPCION
-    {   
+    {
+        public int Id { get; set; }
         public string Descripcion { get; set; }  
-        public string Nombre { get; set; }
+   
 
         public override string ToString()
         {
-            return Nombre;
+            return Descripcion;
         }
 
       
